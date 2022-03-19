@@ -1,0 +1,76 @@
+$ docker run pisichroottest pisi li
+acl              - Access control list utilities
+attr             - Utilities for managing filesystems extended attributes
+baselayout       - Filesystem baselayout
+bash             - The standard GNU Bourne again shell
+bzip2            - A high-quality data compressor
+ca-certificates  - Common CA certificates
+catbox           - Python sandboxing module
+comar            - Manages system configuration
+comar-api        - Utility functions for Comar scripts
+coreutils        - A set of basic GNU tools commonly used in shell scripts
+cpio             - A file archival tool which can also read and write tar files
+cracklib         - Password Checking Library
+curl             - A utility for getting files from remote servers
+db               - Oracle Berkeley DB
+dbus             - A message bus system, a simple way for applications to talk to each other
+dbus-glib        - Glib bindings for D-Bus
+dbus-python      - D-Bus Python bindings
+diffutils        - Tools to make diffs and compare files
+elfutils         - Libraries/utilities to handle ELF objects
+expat            - XML parsing libraries
+file             - Program to identify a file's format by scanning binary data for patterns
+findutils        - GNU utilities to find files
+gdbm             - Standard GNU database libraries included for compatibility with Perl
+gettext          - GNU libraries and utilities for producing multi-lingual messages
+glib2            - A library of handy utility functions
+glibc            - GNU libc6 (also called glibc2) C library
+gmp              - Arbitrary precision arithmetic library
+gperftools       - Google Performance Tools
+grep             - GNU regular expression matcher                                                                                                                                               
+gzip             - Standard GNU compressor                                                                                                                                                      
+kernel-headers   - Header files for the Linux kernel for use by glibc                                                                                                                           
+less             - Excellent text file viewer                                                                                                                                                   
+leveldb          - A fast and lightweight key/value database library
+libcap           - POSIX 1003.1e capabilities library
+libcap-ng        - An alternate POSIX capabilities library
+libffi           - A portable foreign function interface library
+libgcc           - Contains a shared library of support routines used by GCC's runtime, and thus by every program on the system
+libgomp          - Contains GCC shared support library which is needed for OpenMP 2.5 support
+libidn           - Internationalized Domain Names (IDN) implementation
+libpcre          - Perl-compatible regular expression library
+libsigsegv       - A library for handling page faults in user mode
+libssh2          - A library implementing the SSH2 protocol
+libunistring     - Unicode string library
+libunwind        - Call chain tracer of a program
+libuser          - A user and group account administration library
+libxml2          - Version 2 of the library to manipulate XML files
+mudur            - Pisi Linux boot and initialization system
+nasm             - Groovy little assembler
+ncurses          - Console display library
+openssl          - Toolkit for SSL v2/v3 and TLS v1
+pam              - Pluggable Authentication Modules
+patch            - Applies patch files
+perl             - Larry Wall's Practical Extraction and Reporting Language
+piksemel         - Python binding for iksemel
+pisi             - PISI is the package management system of Pisi Linux
+pisilinux-python - Python modules for Pisi Linux
+plyvel           - Plyvel, a fast and feature-rich Python interface to LevelDB.
+popt             - Popt command line option parser
+procps           - Standard informational utilities and process-handling tools
+pycurl           - Python cURL Module
+python           - An interpreted, interactive, object-orientated programming language
+python-pyliblzma - Python bindings for lzma
+readline         - Another cute console display library
+run-parts        - run scripts or programs in a directory
+sed              - GNU Stream Editor
+shadow           - Kullanıcı hesaplarını düzenlemek için araçlar.
+snappy           - A fast compressor/decompressor librar
+sqlite           - An SQL Database Engine in a C Library
+tar              - A GNU file archiving program
+unzip            - Unzipper for pkzip-compressed files
+urlgrabber       - High level cross-protocol url-grabber library for Python
+which            - Prints the location of specified executable in your path
+xz               - XZ compression utilities
+zip              - Info ZIP (encryption support)
+zlib             - Standard (de)compression library

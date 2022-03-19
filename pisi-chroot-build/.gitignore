@@ -1,0 +1,6 @@
+*.pyc
+*.log
+paket/*
+.directory
+*.sha1sum
+*.pisi-index.xml*
