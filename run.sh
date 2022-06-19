@@ -2,12 +2,18 @@
 
 menu_option_one() {
   echo "Creating Toolchain"
-  sh ./lfs-toolchain-builder/run.sh
+  cd lfs-toolchain-builder
+  docker build -t tlyngej/lfs-toolchain-builder:8.3 .
+  mkdir /tmp/lfs
+  docker run --rm -v /tmp/lfs/lfs:/mnt/lfs tlyngej/lfs-toolchain-builder:8.3
+  cd ..
 }
 
 menu_option_two() {
   echo "Installing Base System and PISI"
-  sh ./lfs-base-sytem/run.sh
+  cd lfs-base-system
+  docker run --rm --privileged --userns=host -v /tmp/lfs/lfs:/mnt/lfs tlyngej/lfs-base-system:8.3
+  cd ..
 }
 
 menu_option_three() {
