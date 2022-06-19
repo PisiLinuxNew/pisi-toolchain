@@ -1,5 +1,5 @@
 # Image for building the LFS base system.
-FROM ubuntu:18.04
+FROM pisi:2.2
 MAINTAINER tlyngej@gmail.com
 
 RUN mkdir /mnt/lfs
