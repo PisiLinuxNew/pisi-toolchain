@@ -2,9 +2,9 @@
 # 5.11. Tcl-8.6.8
 set -e
 cd $LFS/sources
-rm -rf tcl8.6.8
-tar xf tcl8.6.8-src.tar.gz
-cd tcl8.6.8
+rm -rf tcl8.6.13
+tar xf tcl8.6.13-src.tar.gz
+cd tcl8.6.13
 
 cd unix
 ./configure --prefix=/tools
@@ -16,4 +16,4 @@ make install-private-headers
 ln -sv tclsh8.6 /tools/bin/tclsh
 
 cd $LFS/sources
-rm -rf tcl8.6.8
+rm -rf tcl8.6.13

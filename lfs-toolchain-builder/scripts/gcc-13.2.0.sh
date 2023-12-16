@@ -2,16 +2,16 @@
 # 5.5. GCC-10.2.0 - Pass 1
 set -e
 cd $LFS/sources
-rm -rf gcc-10.2.0
-tar xf gcc-10.2.0.tar.xz
-cd gcc-10.2.0
+rm -rf gcc-13.2.0
+tar xf gcc-13.2.0.tar.xz
+cd gcc-13.2.0
 
-tar -xf ../mpfr-4.1.0.tar.xz
-mv -v mpfr-4.1.0 mpfr
-tar -xf ../gmp-6.2.1.tar.xz
-mv -v gmp-6.2.1 gmp
-tar -xf ../mpc-1.2.1.tar.gz
-mv -v mpc-1.2.1 mpc
+tar -xf ../mpfr-4.2.0.tar.xz
+mv -v mpfr-4.2.0 mpfr
+tar -xf ../gmp-6.3.0.tar.xz
+mv -v gmp-6.3.0 gmp
+tar -xf ../mpc-1.3.1.tar.gz
+mv -v mpc-1.3.1 mpc
 for file in gcc/config/{linux,i386/linux{,64}}.h
 do
   cp -uv $file{,.orig}
@@ -58,4 +58,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf gcc-10.2.0
+rm -rf gcc-13.2.0

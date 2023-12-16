@@ -2,9 +2,9 @@
 # 5.7. Glibc-2.32
 set -e
 cd $LFS/sources
-rm -rf glibc-2.32
-tar xf glibc-2.32.tar.xz
-cd glibc-2.32
+rm -rf glibc-2.38
+tar xf glibc-2.38.tar.xz
+cd glibc-2.38
 
 mkdir -v build
 cd       build
@@ -20,4 +20,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf glibc-2.32
+rm -rf glibc-2.38
