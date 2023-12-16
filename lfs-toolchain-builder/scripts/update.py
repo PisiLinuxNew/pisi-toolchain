@@ -72,7 +72,7 @@ def updatesRun(oldVersion, newVersion):
 
 # FIXME: ARŞİV ADRESİNDEN DOSYA ADINI VE SÜRÜM NUMARASINI AYIKLA AL
 def updateFiles(path):
-    ignoreThisFile = ["host-reqs.sh", "update.py", "reqs.sh", "base-script.sh", "wget-list", "md5sums"]
+    ignoreThisFile = ["update.py", "reqs.sh", "base-script.sh", "wget-list", "md5sums"]
 
     file_list = list(os.listdir(path))  # scripts dizini altındaki dosyaları listele
     for i in ignoreThisFile:  # remove ignoreThisFile from file_list
@@ -127,7 +127,7 @@ def updateFiles(path):
                 if not (packageFile.startswith("tcl") or packageFile.startswith("expect") or fileName.startswith(
                         "libstdc")):
                     if "pass2" not in fileName and packageFile == packageName:
-                        # FIXME: binutils, coreutils dosyasının son satırında eksi sürüm kalıyor. düzeltilmesi gerekir
+                        # FIXME: binutils, coreutils dosyasının son satırında eksi sürüm kalıyor. düzeltilmesi gerekir: PASSED line-155
                         os.rename(fileName, packageFile + "-" + newVersion + ".sh")
                         newFileName = packageFile + "-" + newVersion + ".sh"
                         # FIXME: gcc dosyasında mpfr,gmp,mpc paketlerinin sürümleri düzeltilecek: PASSED
@@ -151,6 +151,24 @@ def updateFiles(path):
                                     f.write(contents.replace(fileName.strip(".sh"), newFileName.strip(".sh")))
                             except FileNotFoundError:
                                 print("{}:No such file".format(fileName))
+
+                    elif packageFile.startswith("binutils"):    # binutils gereksiz satırı siler
+                        with open(fileName, "r") as f:
+                            ls = f.readlines()
+                            for l in ls:
+                                if "rm" not in ls[-1]:
+                                    ls.pop()
+                                    with open(fileName, "w") as f:
+                                        f.writelines(ls)
+                    
+                    elif packageFile.startswith("coreutils"):   # coreutils gereksiz satırı siler
+                        with open(fileName, "r") as f2:
+                            ls2 = f2.readlines()
+                            for l2 in ls2:
+                                if "rm" not in ls2[-1]:
+                                    ls2.pop()
+                                    with open(fileName, "w") as f2:
+                                        f2.writelines(ls2)
 
                     elif "pass2" in fileName and packageFile == packageName:
                         os.rename(fileName, packageName + "-" + newVersion + "-" + "pass2.sh")
@@ -206,7 +224,7 @@ def updateFiles(path):
                     pass
 
 
-# checkVersion()
-# updateSources(sourceUrl)
-# updatePatch(patchUrl)
+checkVersion()
+updateSources(sourceUrl)
+updatePatch(patchUrl)
 updateFiles(".")

@@ -2,9 +2,9 @@
 # 5.9. Binutils-2.35.1 - Pass 2
 set -e
 cd $LFS/sources
-rm -rf binutils-2.35.1
-tar xf binutils-2.35.1.tar.xz
-cd binutils-2.35.1
+rm -rf binutils-2.41
+tar xf binutils-2.41.tar.xz
+cd binutils-2.41
 
 mkdir -v build
 cd       build
@@ -24,4 +24,4 @@ make -C ld LIB_PATH=/usr/lib:/lib
 cp -v ld/ld-new /tools/bin
 
 cd $LFS/sources
-rm -rf binutils-2.35.1
+rm -rf binutils-2.41

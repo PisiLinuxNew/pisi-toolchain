@@ -1,10 +1,10 @@
 #!/bin/bash
-# 5.8. Libstdc++ from GCC-8.2.0
+# 5.8. Libstdc++ from GCC13.2.0
 set -e
 cd $LFS/sources
-rm -rf gcc-8.2.0
-tar xf gcc-8.2.0.tar.xz
-cd gcc-8.2.0
+rm -rf gcc13.2.0
+tar xf gcc13.2.0.tar.xz
+cd gcc13.2.0
 
 mkdir -v build
 cd       build
@@ -20,4 +20,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf gcc-8.2.0
+rm -rf gcc13.2.0

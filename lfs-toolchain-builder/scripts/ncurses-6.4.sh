@@ -2,8 +2,8 @@
 # 5.15. Ncurses-6.2
 set -e
 cd $LFS/sources
-rm -rf ncurses-6.2
-tar xf ncurses-6.2.tar.gz
+rm -rf ncurses-6.4
+tar xf ncurses-6.4.tar.gz
 cd ncurses-6.1
 
 sed -i s/mawk// configure
@@ -17,4 +17,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf ncurses-6.2
+rm -rf ncurses-6.4
