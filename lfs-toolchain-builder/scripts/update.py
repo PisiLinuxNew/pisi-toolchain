@@ -222,6 +222,19 @@ def updateFiles(path):
                     os.rename(fileName, fileName.strip(".sh").split("+")[0] + "++" + newVersion + ".sh")
                 else:
                     pass
+        
+        # run.sh verisini günceller
+        with open("../run.sh", "r") as run:
+            lines = run.readlines()
+        for index, line in enumerate(lines):
+            if line.startswith("sh /scripts"):
+                file_index = index % len(file_list)
+                file = file_list[file_index]
+                file_raw = file.rstrip(file[-3:])
+                fixed_line = f"sh /scripts/{file} > /mnt/lfs/sources/logs/{file_raw} 2>&1\n"
+                lines[index] = fixed_line
+        with open("../run.sh", "w") as r2:
+            r2.writelines(lines)
 
 
 checkVersion()
